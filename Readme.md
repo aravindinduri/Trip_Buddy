@@ -135,7 +135,6 @@ The application will open automatically in your web browser (usually at `http://
 | Mode A (Strict Grounded LLM) | ✅ | Answers only from itinerary |
 | Chat history memory | ✅ | Maintains conversational context |
 | Error handling & fallback | ✅ | Graceful error messages |
-| Unit testing & CI/CD setup | ⏳ Planned | Focus on robustness and quality assurance |
 
 ---
 
