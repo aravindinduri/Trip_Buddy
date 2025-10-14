@@ -65,7 +65,7 @@ Trip Buddy employs a classic RAG architecture to ensure all responses are ground
 Follow these steps to get your local development environment running.
 
 ### 1. Clone the repository
-```
+
 ```
 git clone https://github.com/aravindinduri/trip-buddy.git
 cd trip-buddy
@@ -136,7 +136,6 @@ The application will open automatically in your web browser (usually at `http://
 
 ### 🌐 External Tool Integrations (Mode B)
 *   **Real-time data:** Integrate APIs for real-time weather, flight status, hotel bookings, and currency exchange rates.
-*   **Location Services:** Integration with Google Maps for nearby attractions and navigation.
 *   **Events:** Event discovery through APIs like Ticketmaster or Eventbrite.
 
 ### 🤖 Intelligence & UX
