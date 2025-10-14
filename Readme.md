@@ -56,44 +56,39 @@ Trip Buddy employs a classic RAG architecture to ensure all responses are ground
 5.  **Augmentation:** The relevant itinerary chunks are combined with the user's question and sent to the Gemini LLM as a single, comprehensive prompt.
 6.  **Generation:** The Gemini model generates a grounded, personalized, and conversational response.
 
-```
 
----
+
+
 
 ## 🚀 Setup Instructions
 
 Follow these steps to get your local development environment running.
 
 ### 1. Clone the repository
-
-```bash
+```
+```
 git clone https://github.com/aravindinduri/trip-buddy.git
 cd trip-buddy
 ```
 
 ### 2. Create a Virtual Environment
-
 It is recommended to use a virtual environment to manage dependencies.
 
-```bash
+```
 python -m venv venv
 source venv/bin/activate  # On Linux/macOS
 # venv\Scripts\activate   # On Windows
 ```
 
 ### 3. Install Dependencies
-
 Install the required Python packages from the `requirements.txt` file.
-
-```bash
+```
 pip install -r requirements.txt
 ```
 
-### 4. Add your Gemini API Key
-
+### 4. Add your Gemini API and HuggingFace API Keys Keys
 Create a file named `.env` in the project root directory and add your Google Gemini API key:
-
-```bash
+```
 # .env file content
 GOOGLE_API_KEY=your_google_api_key_here
 HUGGINGFACE_API_KEY=your_huggingface_token_here
@@ -102,8 +97,7 @@ HUGGINGFACE_API_KEY=your_huggingface_token_here
 ### 5. Run the Streamlit App
 
 Launch the application using Streamlit:
-
-```bash
+```
 streamlit run app.py
 ```
 
