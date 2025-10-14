@@ -18,6 +18,20 @@ Trip Buddy acts as your friendly **AI travel companion**. It processes a user's 
 Crucially, if the information is not explicitly available in the itinerary, Trip Buddy politely refuses to answer, ensuring **accuracy and preventing hallucinations**.
 
 ---
+## File Structure
+```
+Directory structure:
+└── Trip_buddy/
+    ├── Readme.md
+    ├── app.py
+    ├── requirements.txt
+    ├── backend/
+    │   ├── llm.py
+    │   └── retriever.py
+    └── data/
+        └── itinerary.md
+
+```
 
 ## ✨ Key Features
 
@@ -66,7 +80,7 @@ Follow these steps to get your local development environment running.
 
 ### 1. Clone the repository
 
-```
+```bash
 git clone https://github.com/aravindinduri/trip-buddy.git
 cd trip-buddy
 ```
@@ -144,5 +158,14 @@ The application will open automatically in your web browser (usually at `http://
 *   **Dynamic Itinerary:** Ability to update, modify, or regenerate the itinerary based on user requests.
 
 ---
+
 ### Screenshot
 ![Image](https://i.ibb.co/9kqKwSGn/Screenshot-from-2025-10-14-23-06-19.png)
+
+## 🧠 Project Assumptions
+
+1.  **Strict Source of Truth:** The `data/itinerary.md` text file is the **sole source of context** for all LLM answers. No general knowledge, web searches, or external data are used in this mode.
+2.  **Single Trip Scope:** The itinerary file is assumed to contain information for **only one single trip**. This is crucial for avoiding ambiguity when referring to relative terms like "Day 2" or "the hotel," which could be confusing if multiple itineraries were present.
+3.  **Core Assistant Purpose:** The sole function of the Trip Buddy assistant is to answer questions **directly related to the specific travel itinerary**. All off-topic, general knowledge, or administrative queries are politely declined, as reinforced by the keyword checks in the `app.py` file.
+4.  **Well-Structured Data:** The itinerary text is assumed to be reasonably **well-structured** (e.g., using clear headings, tables, or distinct paragraphs) to facilitate effective chunking and retrieval. All key travel details (flights, hotels, sightseeing, etc.) must be **explicitly and fully included** in this file.
+5.  **Language:** User interaction and all itinerary content are assumed to be in **English**.
