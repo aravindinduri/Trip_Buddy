@@ -145,4 +145,4 @@ The application will open automatically in your web browser (usually at `http://
 
 ---
 ### Screenshot
-![Image](https://i.ibb.co/Xrz0yMVX/Screenshot-from-2025-10-14-23-06-19.png)
+![Image](https://i.ibb.co/9kqKwSGn/Screenshot-from-2025-10-14-23-06-19.png)
