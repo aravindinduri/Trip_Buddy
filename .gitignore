@@ -1,0 +1,96 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+*.ipynb
+
+# -----------------------------
+# Environment & Config
+# -----------------------------
+.env
+.env.*
+*.json
+config.yaml
+secrets/
+credentials.json
+
+# -----------------------------
+# Streamlit
+# -----------------------------
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# -----------------------------
+# Logs & Cache
+# -----------------------------
+*.log
+*.out
+*.err
+logs/
+cache/
+__cache__/
+tmp/
+temp/
+
+# -----------------------------
+# OS / Editor Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# -----------------------------
+# Build & Distribution
+# -----------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# -----------------------------
+# Reports / Outputs
+# -----------------------------
+*.pdf
+*.docx
+*.xlsx
+*.csv
+*.jsonl
+*.pickle
+*.pkl
+*.zip
+
+# -----------------------------
+# Checkpoints / Embeddings
+# -----------------------------
+embeddings/
+retriever_cache/
+vector_store/
+faiss_index/
+chroma_index/
+
+# -----------------------------
+# Miscellaneous
+# -----------------------------
+node_modules/
+package-lock.json
+npm-debug.log
