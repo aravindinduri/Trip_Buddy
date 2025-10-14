@@ -152,3 +152,5 @@ The application will open automatically in your web browser (usually at `http://
 *   **Dynamic Itinerary:** Ability to update, modify, or regenerate the itinerary based on user requests.
 
 ---
+### Screenshot
+![Image](https://i.ibb.co/Xrz0yMVX/Screenshot-from-2025-10-14-23-06-19.png)
