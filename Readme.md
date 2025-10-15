@@ -56,7 +56,7 @@ Directory structure:
 | **Frontend** | Streamlit | Fast development of the interactive chat UI. |
 | **Backend** | Python | Main application logic and data processing. |
 | **Data Flow** | RAG (Retrieval) | Context-aware retrieval from the text-based itinerary. |
-| **Environment** | `.config.toml` file | Secure storage and loading of the Gemini API key. |
+| **Environment** | `.` file | Secure storage and loading of the Gemini API key. |
 
 ---
 
@@ -101,14 +101,16 @@ Install the required Python packages from the `requirements.txt` file.
 pip install -r requirements.txt
 ```
 
-### 4. Add your Gemini API and HuggingFace API Keys Keys
-Create a file named `.config.toml` in the project root directory and add your Google Gemini API key:
-```
-# .config.toml file content
-GOOGLE_API_KEY=your_google_api_key_here
-HUGGINGFACE_API_KEY=your_huggingface_token_here
-```
+## 🔐 4. Add Your Gemini & Hugging Face API Keys (Secure Setup)
+---
+1. **Create a local secrets file** for development:
 
+```
+   # .streamlit/secrets.toml
+   [api_keys]
+   GOOGLE_API_KEY = "your_google_api_key_here"
+   HUGGINGFACE_API_KEY = "your_huggingface_token_here"
+```
 ### 5. Run the Streamlit App
 
 Launch the application using Streamlit:
@@ -139,7 +141,7 @@ The application will open automatically in your web browser (usually at `http://
 | :--- | :--- | :--- |
 | Basic itinerary ingestion | ✅ | Text file with structured travel data |
 | Retrieval-based grounding (RAG) | ✅ | Uses `retriever.py` to fetch relevant chunks |
-| Gemini LLM integration | ✅ | Configurable via `.config.toml` |
+| Gemini LLM integration | ✅ | Configurable via `.secrets.toml` |
 | Streamlit front-end | ✅ | Simple UI with chat-style responses |
 | Mode A (Strict Grounded LLM) | ✅ | Answers only from itinerary |
 | Chat history memory | ✅ | Maintains conversational context |
