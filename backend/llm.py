@@ -1,10 +1,7 @@
 import google.generativeai as genai
-import tomli as tomllib
+import streamlit as st
 
-with open("config.toml", "rb") as f:
-    config = tomllib.load(f)
-
-google_key = config["GOOGLE_API_KEY"]
+google_key = st.secrets["api_keys"]["GOOGLE_API_KEY"]
 
 genai.configure(api_key=google_key)
 

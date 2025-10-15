@@ -3,11 +3,10 @@ import requests
 import faiss
 import numpy as np
 import os
-import tomli as tomllib
-with open("config.toml", "rb") as f:
-    config = tomllib.load(f)
+import streamlit as st
 
-huggingface_key = config["HUGGINGFACE_API_KEY"]
+
+huggingface_key = st.secrets["api_keys"]["HUGGINGFACE_API_KEY"]
 
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 
