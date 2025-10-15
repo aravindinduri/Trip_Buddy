@@ -1,9 +1,12 @@
 import google.generativeai as genai
-import os
-from dotenv import load_dotenv
+import tomli as tomllib
 
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+with open("config.toml", "rb") as f:
+    config = tomllib.load(f)
+
+google_key = config["GOOGLE_API_KEY"]
+
+genai.configure(api_key=google_key)
 
 def call_gemini(prompt: str, model="gemini-flash-latest"):
     """

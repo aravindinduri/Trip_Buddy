@@ -3,15 +3,16 @@ import requests
 import faiss
 import numpy as np
 import os
-from dotenv import load_dotenv
+import tomli as tomllib
+with open("config.toml", "rb") as f:
+    config = tomllib.load(f)
 
-load_dotenv()
+huggingface_key = config["HUGGINGFACE_API_KEY"]
 
-HF_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 
 HEADERS = {
-    "Authorization": f"Bearer {HF_API_KEY}",
+    "Authorization": f"Bearer {huggingface_key}",
     "Content-Type": "application/json",
 }
 
