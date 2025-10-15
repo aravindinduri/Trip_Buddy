@@ -5,6 +5,7 @@
 **Trip Buddy** is an intelligent, context-aware travel assistant built using the Google **Gemini AI**. It provides personalized, grounded answers based *strictly* on a structured itinerary, helping travelers plan, explore, and manage their trips effectively without hallucination.
 
 ---
+## [LIVE](https://aravindinduri-trip-buddy-app-1fq4m4.streamlit.app/)
 
 ## 💡 Overview
 
