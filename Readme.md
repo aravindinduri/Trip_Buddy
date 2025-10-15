@@ -1,4 +1,4 @@
-#NOTE : Try to Avoid LAN network while testing deployed version.
+# NOTE : Try to Avoid LAN network while testing deployed version.
 # 🧭  Travel Assistant (Trip Buddy) 
 
 
