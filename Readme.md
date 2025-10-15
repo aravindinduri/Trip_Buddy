@@ -55,7 +55,7 @@ Directory structure:
 | **Frontend** | Streamlit | Fast development of the interactive chat UI. |
 | **Backend** | Python | Main application logic and data processing. |
 | **Data Flow** | RAG (Retrieval) | Context-aware retrieval from the text-based itinerary. |
-| **Environment** | `.env` file | Secure storage and loading of the Gemini API key. |
+| **Environment** | `.config.toml` file | Secure storage and loading of the Gemini API key. |
 
 ---
 
@@ -101,9 +101,9 @@ pip install -r requirements.txt
 ```
 
 ### 4. Add your Gemini API and HuggingFace API Keys Keys
-Create a file named `.env` in the project root directory and add your Google Gemini API key:
+Create a file named `.config.toml` in the project root directory and add your Google Gemini API key:
 ```
-# .env file content
+# .config.toml file content
 GOOGLE_API_KEY=your_google_api_key_here
 HUGGINGFACE_API_KEY=your_huggingface_token_here
 ```
@@ -138,7 +138,7 @@ The application will open automatically in your web browser (usually at `http://
 | :--- | :--- | :--- |
 | Basic itinerary ingestion | ✅ | Text file with structured travel data |
 | Retrieval-based grounding (RAG) | ✅ | Uses `retriever.py` to fetch relevant chunks |
-| Gemini LLM integration | ✅ | Configurable via `.env` |
+| Gemini LLM integration | ✅ | Configurable via `.config.toml` |
 | Streamlit front-end | ✅ | Simple UI with chat-style responses |
 | Mode A (Strict Grounded LLM) | ✅ | Answers only from itinerary |
 | Chat history memory | ✅ | Maintains conversational context |
