@@ -17,7 +17,7 @@ HEADERS = {
 
 def get_embedding(text: str):
     """Fetch embeddings from Hugging Face Inference API."""
-    url = f"https://api-inference.huggingface.co/models/{EMBEDDING_MODEL}"
+    url = f"https://router.huggingface.co/hf-inference/models/{EMBEDDING_MODEL}"
     response = requests.post(url, headers=HEADERS, json={"inputs": text}, timeout=60)
     if response.status_code != 200:
         raise Exception(f"Hugging Face API error {response.status_code}: {response.text}")
